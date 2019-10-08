@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thục hành tạo và gọi hàm</title>
+</head>
+<body>
+<script>
+    function processConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "Excellent. We'll play a nice game of chess.";
+        } else {
+            result = "Maybe later then.";
+        }
+        return result;
+    }
+//Hàm này đánh giá giá trị có trong đối số answer
+//bất kể biến answer lưu giá trị gì, hàm processConfirm trả về biến result cho hàm gọi bằng câu lệnh return bên trong hàm
+    let confirmAnswer = confirm("Shall we play a game?");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+//Hàm confirm() nhận vào một đối số duy nhất. đó là nội dung thông báo dder hiển thị trong hộp thoại
+//hàm confirm() nên đặt nội dung thông báo theo dạng câu hỏi hoặc thông điệp cho phép người dùng lựa chọn
+//nếu người dùng không đưa vào lựa chon nào nên thay thế bằng hàm alert()
+
+</script>
+</body>
+</html>
